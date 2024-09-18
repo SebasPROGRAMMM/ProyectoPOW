@@ -63,7 +63,7 @@ namespace Pow.Controllers
                 return View();
             }
 
-            // Aquí puedes configurar la autenticación, por ejemplo con cookies
+         
             return RedirectToAction("Index", "Home");
         }
     }
