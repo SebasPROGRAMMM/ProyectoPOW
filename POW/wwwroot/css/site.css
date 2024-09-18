@@ -1,0 +1,97 @@
+h /* Tamaño de fuente base */
+html {
+    font-size: 14px;
+}
+
+/* Tamaño de fuente en pantallas más grandes */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Estilos de enfoque y activación para elementos de formulario y botones */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Asegura que la página ocupe el 100% de la altura de la ventana */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f9; /* Color de fondo claro */
+}
+
+/* Estilo para el contenedor de botones */
+.button-group {
+    text-align: center;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 10px; /* Espacio horizontal entre botones */
+}
+
+.btn-primary {
+    background-color: #0056b3; /* Azul oscuro */
+}
+
+    .btn-primary:hover {
+        background-color: #003d7a; /* Azul más oscuro en hover */
+    }
+
+.btn-secondary {
+    background-color: #007bff; /* Azul brillante */
+}
+
+    .btn-secondary:hover {
+        background-color: #0056b3; /* Azul oscuro en hover */
+    }
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para el título principal */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Espaciado para formularios */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Estilo para campos de formulario */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Botón de formulario */
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
