@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Pow.Models;
 using BCrypt.Net;
-using Pow.Data; // Si estás usando BCrypt para hashing de contraseñas
+using Pow.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pow.Pages.Account
 {
@@ -20,6 +21,13 @@ namespace Pow.Pages.Account
 
         public class RegisterInputModel
         {
+
+         [Required]
+         [EmailAddress]
+
+ [RegularExpression(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", ErrorMessage = "El email debe contener un '@' válido.")]
+
+ 
             public string Email { get; set; }
             public string Password { get; set; }
             public string Nombre { get; set; }
