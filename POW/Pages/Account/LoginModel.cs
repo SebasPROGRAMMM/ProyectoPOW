@@ -37,13 +37,22 @@ namespace Pow.Pages.Account
             }
 
             var user = _context.Usuarios.FirstOrDefault(u => u.Email == Input.Email);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(Input.Password, user.PasswordHash))
+                      if (user == null || !BCrypt.Net.BCrypt.Verify(Input.Password, user.PasswordHash))
             {
                 ModelState.AddModelError(string.Empty, "Credenciales inválidas.");
                 return Page();
             }
 
-            // Redirigir a una página de éxito (por ejemplo, Index)
+            // Redirigir según el rol
+            if (user.RolId == 1) // Estudiante
+            {
+                return RedirectToPage("/Account/EstudianteBienvenido");
+            }
+            else if (user.RolId == 2) // Profesor
+            {
+                return RedirectToPage("/Account/ProfesorBienvenido");
+            }
+
             return RedirectToPage("/Index");
         }
     }
